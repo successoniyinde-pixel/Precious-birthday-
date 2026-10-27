@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f5">
+<title>Happy Birthday Precious ❤️</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ color:#71334d;
+ background:linear-gradient(145deg,#fff8fb,#ffe0ec,#fff2f7);
+ overflow-x:hidden
+}
+.hero{
+ min-height:100svh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ padding:25px;
+ position:relative;
+ overflow:hidden
+}
+.glow{
+ position:absolute;width:250px;height:250px;
+ border-radius:50%;background:#ff9fc5;
+ filter:blur(70px);opacity:.5
+}
+.content{position:relative}
+.small{
+ letter-spacing:4px;font-size:11px;
+ text-transform:uppercase;color:#c52e69
+}
+h1{
+ font-family:Georgia,serif;
+ font-size:clamp(48px,12vw,76px);
+ color:#c52e69;margin:22px 0
+}
+.hero p{line-height:1.8;max-width:340px;margin:0 auto 25px}
+.big-heart{font-size:55px;animation:beat 1.2s infinite}
+@keyframes beat{50%{transform:scale(1.16)}}
+.btn{
+ border:0;border-radius:40px;padding:15px 23px;
+ background:linear-gradient(135deg,#ff83ad,#e83f80);
+ color:white;font-size:15px;font-weight:bold;
+ box-shadow:0 8px 20px #ec659344;cursor:pointer
+}
+nav{
+ position:sticky;top:0;z-index:5;
+ display:flex;justify-content:center;gap:17px;
+ flex-wrap:wrap;padding:14px 8px;
+ background:#fff5f5ed;backdrop-filter:blur(10px)
+}
+nav a{color:#c52e69;text-decoration:none;font-size:12px;font-weight:bold}
+section{max-width:900px;margin:auto;padding:60px 17px;scroll-margin-top:45px}
+h2{
+ text-align:center;font-family:Georgia,serif;
+ font-size:clamp(30px,7vw,42px);color:#c52e69
+}
+.sub{text-align:center;font-size:14px;line-height:1.8;margin-bottom:28px}
+.card{
+ background:#ffffffdf;border:1px solid #ffd0e0;
+ border-radius:22px;padding:22px;
+ box-shadow:0 10px 30px #bd487215
+}
+.center{text-align:center}
+.cake{font-size:65px}
+.countdown{
+ display:grid;grid-template-columns:repeat(4,1fr);
+ gap:8px;margin:24px auto 0;max-width:450px
+}
+.time{
+ background:white;border:1px solid #ffd1e0;
+ border-radius:13px;padding:13px 3px
+}
+.time strong{display:block;color:#c52e69;font-size:24px}
+.time span{font-size:10px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.media{
+ background:white;border:1px solid #ffd0e0;
+ border-radius:17px;padding:8px;overflow:hidden
+}
+.media img,.media video{
+ width:100%;aspect-ratio:4/5;object-fit:cover;
+ display:block;background:#ffe1ec;border-radius:11px
+}
+.media p{text-align:center;font-size:13px;overflow-wrap:anywhere}
+.note{
+ background:#fff9fb;border:1px dashed #ed91b1;
+ padding:15px;border-radius:14px;font-size:13px;
+ text-align:center;line-height:1.7
+}
+.letter{font-family:Georgia,serif;line-height:2;font-size:16px;white-space:pre-line}
+.letter strong{color:#c52e69}
+.hidden{display:none!important}
+.reveal{
+ margin-top:22px;padding:20px;border-radius:18px;
+ background:#fff0f6;text-align:center;line-height:1.8;
+ animation:appear .6s ease
+}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+footer{background:#ffe1ed;text-align:center;padding:35px 15px;line-height:1.9;font-size:13px}
+.floating{
+ position:fixed;bottom:-35px;z-index:20;
+ pointer-events:none;animation:rise 5s linear forwards
+}
+@keyframes rise{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+@media(min-width:650px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+
+<body>
+
+<header class="hero" id="home">
+ <div class="glow"></div>
+ <div class="content">
+  <div class="small">A little surprise made just for you</div>
+  <div class="big-heart">💗</div>
+  <h1>Happy Birthday<br>Precious</h1>
+  <p>
+   Today is all about you, your beautiful smile,
+   your happiness, and all the wonderful things
+   you deserve. I made this little world just for you.
+  </p>
+  <button class="btn" onclick="openSurprise()">Open Your Surprise ✨</button>
+  <p style="margin-top:24px">Made with love by Success ❤️</p>
+ </div>
+</header>
+
+<nav>
+ <a href="#birthday">Birthday</a>
+ <a href="#memories">Photos</a>
+ <a href="#videos">Videos</a>
+ <a href="#letter">My Letter</a>
+</nav>
+
+<main>
+
+<section id="birthday">
+ <h2>Your Special Day 🎂</h2>
+ <p class="sub">October 28 is a beautiful date because it celebrates you.</p>
+ <div class="card center">
+  <div class="cake">🎂🌹</div>
+  <h3 style="color:#c52e69">To my Precious ❤️</h3>
+  <p style="line-height:1.9">
+   May your new year of life bring you peace,
+   laughter, beautiful opportunities, and countless
+   reasons to smile. You deserve happiness today and always.
+  </p>
+  <div id="birthdayStatus">Counting down to October 28 🎀</div>
+  <div class="countdown" id="countdown">
+   <div class="time"><strong id="days">0</strong><span>DAYS</span></div>
+   <div class="time"><strong id="hours">0</strong><span>HOURS</span></div>
+   <div class="time"><strong id="minutes">0</strong><span>MINS</span></div>
+   <div class="time"><strong id="seconds">0</strong><span>SECS</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="memories">
+ <h2>Our Little Memories 📸</h2>
+ <p class="sub">A collection of beautiful moments and pictures of you.</p>
+ <div class="grid">
+
+  <div class="media">
+   <img src="photos/precious1.jpg" alt="Precious photo 1"
+    onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+   <div class="note" hidden>Add photos/precious1.jpg</div>
+   <p>My favorite smile 💕</p>
+  </div>
+
+  <div class="media">
+   <img src="photos/precious2.jpg" alt="Precious photo 2"
+    onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+   <div class="note" hidden>Add photos/precious2.jpg</div>
+   <p>A beautiful memory 🌸</p>
+  </div>
+
+  <div class="media">
+   <img src="photos/precious3.jpg" alt="Precious photo 3"
+    onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+   <div class="note" hidden>Add photos/precious3.jpg</div>
+   <p>Simply Precious 💗</p>
+  </div>
+
+  <div class="media">
+   <img src="photos/precious4.jpg" alt="Precious photo 4"
+    onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+   <div class="note" hidden>Add photos/precious4.jpg</div>
+   <p>Forever a memory 🌷</p>
+  </div>
+
+ </div>
+</section>
+
+<section id="videos">
+ <h2>Moments in Motion 🎬</h2>
+ <p class="sub">Little videos to make these memories even more special.</p>
+ <div class="grid">
+
+  <div class="media">
+   <video controls playsinline preload="metadata">
+    <source src="videos/memory1.mp4" type="video/mp4">
+   </video>
+   <p>Our special moment ❤️</p>
+  </div>
+
+  <div class="media">
+   <video controls playsinline preload="metadata">
+    <source src="videos/memory2.mp4" type="video/mp4">
+   </video>
+   <p>A moment to remember 💞</p>
+  </div>
+
+ </div>
+ <p class="sub" style="font-size:12px">
+  Put your videos inside the videos folder using the filenames above.
+ </p>
+</section>
+
+<section id="letter">
+ <h2>A Letter From Success 💌</h2>
+ <p class="sub">A few words from my heart to you.</p>
+
+ <div class="card">
+  <div class="letter">My dearest Precious,
+
+Happy birthday to you, my special person. ❤️
+
+Today celebrates the beautiful person you are.
+I hope this new chapter brings you peace, happiness,
+success, and countless reasons to smile.
+
+Thank you for being part of my story. I cherish
+the memories we share and the little moments that
+make life feel special.
+
+I pray that your dreams grow bigger, your courage
+grows stronger, and your heart always finds reasons
+to hope. Whenever life gets difficult, remember
+that you are capable of wonderful things.
+
+I made this little website so you could have
+something special to look back on. Every picture,
+every memory, and every word here is a birthday
+wish from me to you.
+
+Happy birthday once again, Precious. May your
+days be filled with love, laughter, and blessings.
+
+<strong>With love,
+Success ❤️</strong></div>
+
+  <div class="center" style="margin-top:25px">
+   <button class="btn" onclick="showFinal()">One Last Surprise 💝</button>
+  </div>
+
+  <div id="finalMessage" class="reveal hidden">
+   <div style="font-size:45px">💖🌹💖</div>
+   <h3 style="color:#c52e69">You Are Special, Precious</h3>
+   <p>
+    I hope this little surprise makes you smile.
+    You deserve beautiful memories, a peaceful heart,
+    and happiness that follows you everywhere.
+   </p>
+   <strong>Happy Birthday, Precious! ❤️</strong>
+   <p>From your Success 💌</p>
+  </div>
+ </div>
+</section>
+
+</main>
+
+<footer>
+ <div style="font-size:30px">💕</div>
+ Made with love, just for Precious.<br>
+ Designed by Success ❤️<br>
+ October 28 — your special day.
+</footer>
+
+<script>
+function openSurprise(){
+ document.getElementById("birthday").scrollIntoView({behavior:"smooth"});
+ burstHearts(20);
+}
+
+function showFinal(){
+ const box=document.getElementById("finalMessage");
+ box.classList.remove("hidden");
+ burstHearts(25);
+ box.scrollIntoView({behavior:"smooth",block:"center"});
+}
+
+function burstHearts(amount){
+ const symbols=["💗","💕","💖","🌸","❤️"];
+ for(let i=0;i<amount;i++){
+  const el=document.createElement("span");
+  el.className="floating";
+  el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  el.style.left=Math.random()*100+"vw";
+  el.style.fontSize=(16+Math.random()*22)+"px";
+  el.style.animationDuration=(3+Math.random()*3)+"s";
+  document.body.appendChild(el);
+  el.addEventListener("animationend",()=>el.remove());
+ }
+}
+
+// October 28, 2026. If today is her birthday, show the birthday message.
+function updateCountdown(){
+ const now=new Date();
+ const target=new Date(2026,9,28,0,0,0);
+ const endOfBirthday=new Date(2026,9,29,0,0,0);
+
+ if(now>=target && now<endOfBirthday){
+  document.getElementById("birthdayStatus").textContent=
+   "Happy Birthday, Precious! 🎂❤️";
+  document.getElementById("countdown").style.display="none";
+  return;
+ }
+
+ if(now>=endOfBirthday){
+  document.getElementById("birthdayStatus").textContent=
+   "Happy Birthday, Precious! ❤️ See you next year!";
+  document.getElementById("countdown").style.display="none";
+  return;
+ }
+
+ const diff=target-now;
+ document.getElementById("days").textContent=Math.floor(diff/86400000);
+ document.getElementById("hours").textContent=Math.floor(diff%86400000/3600000);
+ document.getElementById("minutes").textContent=Math.floor(diff%3600000/60000);
+ document.getElementById("seconds").textContent=Math.floor(diff%60000/1000);
+}
+
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+setInterval(()=>{
+ if(document.hidden)return;
+ const el=document.createElement("span");
+ el.className="floating";
+ el.textContent=Math.random()>.5?"♡":"💕";
+ el.style.left=Math.random()*100+"vw";
+ el.style.fontSize="18px";
+ el.style.animationDuration="6s";
+ document.body.appendChild(el);
+ el.addEventListener("animationend",()=>el.remove());
+},1800);
+</script>
+
+  
+<audio id="birthdayMusic" loop>
+  <source src="music/precious.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="document.getElementById('birthdayMusic').play()"
+  style="position:fixed;bottom:20px;right:20px;z-index:9999;
+  background:#ff4f91;color:white;border:0;border-radius:25px;
+  padding:14px 18px;font-size:16px;">
+  🎵 Play Birthday Song
+</button>
+
+</body>
+</html>
